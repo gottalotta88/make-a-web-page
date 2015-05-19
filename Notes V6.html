@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stage 1 Project</title>
+    <link rel="stylesheet" type="text/css" href="stage1.css">
+</head>
+<body>
+  <img class="image1" src="images/everest.png" alt="oops!">
+  <h1>Lesson 1: Basics of web and HTML</h1>
+  <div class="subtopic">
+    <div class=header2>Big ideas</div>
+    <div class="text">
+      <p>
+        HTML: Hypertext markup language
+      </p>
+      <p>
+        Web invented in the 1990s; all pages link together
+      </p>
+      <p>
+        Browser makes requests to the internet via HTTP to servers, which respond with files that the browser displays
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Components of HTML</div>
+    <div class="text">
+      <p>
+        <b>Text content</b>: what you see<br>
+      </p>
+      <p>
+        <b>Markup</b>: what it looks like<br>
+      </p>
+      <p>
+        References to other documents: images and videos
+      <p>
+        Test out code at <a href ="www.udacity.com/html_playground"> link </a>
+      </P>
+      <p>
+        <b>Opening tags</b> and <b>closing tags</b>; both tags plus contents within is called an element
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Notes on elements</div>
+    <div class="text">
+      <p>
+        B tag is for bold
+      </p>
+      <p>
+        em tag is for italics
+      </p>  
+      <p>  
+        If you don't close tag; everything after is bolded/italicized
+      </p>  
+      <p>
+        a is for anchor
+         <ul>
+          <li>Used for making links</li>
+          <li>Followed by an attribute name, value, and then contents
+          </ul>
+        img is for image
+          <ul>
+          <li>Src and alt are attributes; alt is what to display if broken request
+          <li>Img doesn't have any content, so no closing tag; this is called a void tag, a tag that has no content</li>
+          </ul>
+        Lines
+          <ul>
+          <li>br is a line break to make text go onto next line; also a void tag</li>
+          <li>p is for paragraph; need closing tag after content</li>
+          <li>Br just puts to next line whereas p tag makes an invisible box; br is an inline element while p is a block element; latter creates blocks on the screen</li>
+          <li>Spaces and returns will not be registered</li>
+          </ul>
+        Span and div
+          <ul>
+          <li>Span can be used to give CSS styles to contents; inline element</li>
+          <li>Div does the same but as a block element</li>
+          </ul>
+        Thus basic HTML vocab consists of <b>tags</b>, <b>elements</b>, and <b>attributes</b>
+    </div>
+  </div>  
+  <h1>Lesson 2: Structure of web pages</h1>
+  <div class="subtopic">
+    <div class="header2">Tree-like structure of pages</div>
+    <div class="text">
+      <p>
+        Developer tool creates tree-like structure with triangles to denote elements
+      </p>
+      <p>
+        Did exercise where draw tree-like structure of simple web page; http://assignments.udacity-extras.appspot.com/courses/html-css/samples/explore.html
+      </p>
+      <p>
+        Div elements create "containers" and can have further nested containers within
+      </p>
+    </div> 
+  </div>
+  <div class="subtopic">
+    <div class="header2">Document object model (DOM)</div>
+    <div class="text">
+      <p>
+        Standard convention for representing HTML document
+      </p>
+        Can highlight the HTML code in the developer tools DOM corresponding to an object and then adjust the style details for it
+        <ul>
+          <li>http://assignments.udacity-extras.appspot.com/courses/html-css/samples/shapes.html</li>
+          <li>Unchecking border radius box turns circles into squares; all elements of a document are actually boxes</li>
+          <li>When given a design mock, you "boxify" it into boxed components</li>
+          <li>Can split up a box with nested divs</li>
+        </ul>
+    </div>
+  </div>  
+  <div class="subtopic">
+    <div class="header2">CSS</div>
+    <div class="text">
+      <p>
+        Allows style and appearance formatting; for example can make all h1 elements of the class "x" look the same way
+      </p>
+      <p>
+        One key benefit of using CSS for styling is <b>repetition</b>; allows you to write far less styling code which can be abstracted as classes and summoned with short snippets of code
+      </p>
+      <p>
+        Repetition also makes a page run faster
+      </p>
+    </div>
+  </div>
+  <h1>Lesson 3: Adding CSS Style and HTML Structure</h1>
+  <div class="subtopic">
+    <div class="header2">Basic terms</div>
+    <div class="text">
+      <p>
+        CSS: Cascading style sheets
+      </p>
+      <p>
+        <b>Inheritance</b>: descended elements nested within an HTML element will inherit CSS properties of the larger element, unless the sub-element has its own specified CSS style
+      </p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Basic structure</div>
+    <div class="text">
+      <p>For all h1: h1 {color:red;}</p>
+      <p>For specific CSS classes: .classname {color:red;}</p>
+      <p>h1 is a <b>selector</b>; rule can be applied to all h1; can also apply rule to all div</p>
+      <p>color:red is a <b>declaration</b></p>
+      <p>color is a <b>property</b>; red is the value of that property</p>
+      <p>Mozilla has good exhaustive reference for CSS properties; e.g. font-weight specifies boldness</p>
+      <p>Outline CSS property can be used to better see block structure of your page</p>
+    </div>
+  </div>
+  <div class="subtopic">
+    <div class="header2">Clarifications</div>
+    <div class="text">
+        Span vs. Div
+        <ul>
+          <li>Div is block element; good for grouping and organization</li>
+          <li>Span class can be used as inline element; example in class code of using it for span class=italic and then defining italic in CSS</li>
+        </ul>
+      <p>
+        Id vs class
+        <ul>
+          <li>Id uniquely identifies an element and don't repeat, as opposed to class which can be repeated</li>
+          <li>Useful if want to use <b>anchor element to link to a particular spot</b>; id="welcome"; a href="#welcome"</li>
+          <li>Class better for grouping similarly</li>
+          <li>Can use both id and class in a div</li>
+        </ul>
+    </div>
+  </div>
+  <div class ="subtopic">
+    <div class ="header2">Box model</div>
+    <div class="text">
+      <p>
+        All HTML elements are boxes
+      </p>
+        Components
+        <ul>
+          <li>Content -  text and images</li>
+          <li>Padding - transparent area</li>
+          <li>Border - border around padding and content</li>
+          <li>Margin; transparent; basically whitespace between boxes</li>
+        </ul>
+      <p>
+        Width of content as defined won't be total width; total width of box involves adding content, padding, and border
+      </p>
+      <p>
+        Not intuitive to have defined width not reflect what is actually rendered; thus <b>box-sizing</b> property with <b>border-box</b> value will make defined width the width of the combo of border, padding, and content which is more intuitive; margin not included in size
+      <p>
+        Can set width as percentage of window so that it adjusts to window width
+      </p>
+      <p>
+        Max-width attribute such that will adjust but not above a max width; overrides width property
+      </p>
+    </div>
+  </div>
+</body>
+</html>
